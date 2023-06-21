@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f06d06;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  height: 100vh;
+}
+
+h1 {
+  position: relative;
+  color: #ad4d01;
+  font-size: 4em;
+  letter-spacing: 5px;
+  border-bottom: 1rem solid #ad4d01;
+  line-height: 1.7;
+}
+
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  border-bottom: 1rem solid white;
+  animation: lod 3s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes lod {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
